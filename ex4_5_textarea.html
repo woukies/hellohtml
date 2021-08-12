@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 폼</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>구직회원</legend>
+            회원번호<input type="text">
+            비밀번호<input type="password">
+            <button type="submit">로그인</button>
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>취업정보</legend>
+            <ul>
+                <li>희망지역<sup><em>*</em></sup> <input type="text" required></li>
+                <li>희망연봉<sup><em>*</em></sup> <input type="number" required></li>
+                <li>연락처<sup><em>*</em></sup> <input type="tel" required></li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>자기 소개서</legend>
+            <textarea cols="60" rows="5">
+200자 내외로
+소개해 보세요.
+            </textarea>
+        </fieldset>
+        <fieldset>
+            <button type="submit">정보저장</button>
+            <button type="reset">다시쓰기</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
