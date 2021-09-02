@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        .table1 {
+            border-collapse: collapse;
+            width: 300px;
+            table-layout: fixed;
+            word-break: break-all;
+        }
+
+        .table1 td {
+            width: 150px;
+            padding: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Table Layout</h1>
+    <table class="table1">
+        <tr>
+            <td>한글로띄어쓰기없이길게붙여쓰기</td>
+            <td>long description_without--space aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbccccccccccccdddddddddddddddd</td>
+        </tr>
+    </table>
+</body>
+
+</html>
