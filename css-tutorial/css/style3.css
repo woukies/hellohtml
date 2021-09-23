@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(9, 100, 160);
+}
+
+#container {
+    width: 320px;
+    margin: 50px auto;
+}
+
+.card {
+    position: relative;
+    height: 500px;
+    margin: 20px 10px;
+    background-color: #fff;
+}
+
+.words {
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (min-width:768px) and (max-width:1719px) {
+    #container {
+        width: 570px;
+        margin: 50px auto;
+    }
+
+    .card {
+        height: 250px;
+    }
+
+    .words {
+        position: absolute;
+        left: 310px;
+        top: 50px;
+        width: 200px;
+    }
+}
+
+@media screen and (min-width:1720px) {
+    #container {
+        width: 1710px;
+    }
+
+    .card {
+        float: left;
+        height: 250px;
+        width: 550px;
+    }
+
+    .words {
+        position: absolute;
+        left: 310px;
+        top: 50px;
+        width: 200px;
+    }
+}
