@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var today = new Date();
+        var nowMonth = today.getMonth() + 1;
+        var nowDate = today.getDate();
+        var nowDay = today.getDay();
+        var week = new Array('일', '월', '화', '수', '목', '금', '토');
+
+        document.write("<h1>오늘 날짜 정보</h1>");
+        document.write("현재 월: " + nowMonth, "<br>");
+        document.write("현재 일: " + nowDate, "<br>");
+        document.write("현재 요일: " + week[nowDay], "<br>");
+
+        var someday = new Date(2002, 4, 31);
+        var someMonth = someday.getMonth() + 1;
+        var someDate = someday.getDate();
+        var someDay = someday.getDay();
+
+        document.write("<h1>특정 날짜 정보</h1>");
+        document.write("특정 월: " + someMonth, "<br>");
+        document.write("특정 일: " + someDate, "<br>");
+        document.write("특정 요일: " + week[someDay], "<br>");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
