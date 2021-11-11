@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            var $txt1 = $(".txt_1 span");
+            var $txt2 = $(".txt_2 span");
+            var $box = $(".box");
+
+            var off_t = $box.offset().top;
+            var pos_t = $box.position().top;
+            console.log(off_t);
+
+            $txt1.text(off_t);
+            $txt2.text(pos_t);
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box_wrap {
+            height: 200px;
+            width: 300px;
+            position: relative;
+            background-color: #ccc;
+            margin: 50px auto 0;
+        }
+
+        .box {
+            height: 50px;
+            width: 50px;
+            left: 100px;
+            top: 50px;
+            position: absolute;
+            background-color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box_wrap">
+        <p class="box">박스</p>
+    </div>
+    <p class="txt_1">
+        절대 top 위치값:
+        <span></span>
+    </p>
+    <p class="txt_2">
+        상대 top 위치값:
+        <span></span>
+    </p>
+</body>
+
+</html>
