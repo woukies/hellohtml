@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $(".btn2").hide();
+
+            $(".btn1").on("click", function () {
+                $(".box").slideUp(1000, "linear", function () {
+                    $(".btn1").hide();
+                    $(".btn2").show();
+                });
+            });
+
+            $(".btn2").on("click", function () {
+                $(".box").fadeIn(1000, "swing", function () {
+                    $(".btn1").show();
+                    $(".btn2").hide();
+                });
+            });
+
+            $(".btn3").on("click", function () {
+                $(".box").slideToggle(1000, "linear");
+            });
+
+            $(".btn4").on("click", function () {
+                $(".box").fadeTo("fast", 0.3);
+            });
+            $(".btn5").on("click", function () {
+                $(".box").fadeTo("fast", 1);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>
+        <button class="btn1">slideUp</button>
+        <button class="btn2">fadeIn</button>
+    </p>
+    <p>
+        <button class="btn3">toggleSide</button>
+    </p>
+    <p>
+        <button class="btn4">fateTo(0.3)</button>
+        <button class="btn5">fateTo(1)</button>
+    </p>
+    <div class="box">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in leo metus. Curabitur eget nunc varius,
+            hendrerit eros sed, scelerisque quam. Aenean sit amet dictum lorem, ac ultrices lorem. Morbi ut orci in est
+            dignissim efficitur sit amet in lectus. Mauris non ipsum magna. Mauris maximus tortor sed tellus eleifend
+            consectetur. Donec et ante at libero auctor commodo ut at lacus. Morbi vel urna mi.
+
+            Morbi pulvinar efficitur orci, nec lacinia nisl porttitor sit amet. Curabitur tempor massa ut massa
+            fringilla, sit amet semper lacus ullamcorper. Mauris sollicitudin placerat tortor, in imperdiet sapien
+            dapibus ut. Vivamus convallis dui mi, sed eleifend lectus tincidunt a. Vestibulum laoreet, ex a aliquet
+            sodales, ligula nisi pulvinar nunc, ut posuere nisl arcu eu turpis. Vivamus dictum, lorem at rhoncus
+            ultricies, nisl nisl tincidunt leo, at accumsan ipsum nibh sed velit. Proin suscipit commodo lacus, sed
+            sagittis orci bibendum et. Vivamus sed turpis id nunc varius pretium a sit amet augue. Vestibulum dictum
+            egestas venenatis. Sed blandit ante at elit euismod condimentum. Sed lacinia arcu enim, nec congue lorem
+            suscipit id.
+
+            Donec a luctus urna. Mauris sed imperdiet eros. Quisque vitae bibendum ante, eget varius sem. Ut in lorem
+            nec massa aliquam molestie nec eget nisl. Proin vitae egestas ex, a accumsan ex. Cras blandit dolor nulla,
+            at rutrum tortor consequat eget. Nulla non ultricies elit. Sed accumsan placerat massa, ut rhoncus ex
+            tristique sed. Proin hendrerit tempor urna ac tempus. Curabitur non augue varius, mollis nulla nec,
+            malesuada elit.
+        </div>
+    </div>
+</body>
+
+</html>
