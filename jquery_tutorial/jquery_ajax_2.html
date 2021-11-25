@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script>
+        $.ajax({
+            url: "../dat/MOCK_DATA.json",
+            dataType: "json",
+            success: function (data) {
+                if (data.length > 0) {
+                    var tb = $("<table />");
+
+                    data.forEach(element => {
+                        var $id = element.id;
+                        var $first_name = element.first_name;
+                        var $last_name = element.last_name;
+                        var $email = element.email;
+                        var $gender = element.gender;
+
+                        tb.append($("<tr />").append(
+                            $("<td />").text($id),
+                            $("<td />").text($first_name),
+                            $("<td />").text($last_name),
+                            $("<td />").text($email),
+                            $("<td />").text($gender)
+                        ));
+                    });
+
+                    $(".wrap").append(tb);
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrap"></div>
+</body>
+
+</html>
