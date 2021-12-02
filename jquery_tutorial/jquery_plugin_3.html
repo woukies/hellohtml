@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/jquery.bxslider.js"></script>
+    <script>
+        $(function () {
+            $(".slide_gallery").bxSlider({
+                auto: true,
+                autoControls: true
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #gallery_wrap {
+            margin: 0 auto;
+            width: 640px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gallery_wrap">
+        <ul class="slide_gallery">
+            <li><img src="../images/pic2_1.jpg"></li>
+            <li><img src="../images/pic2_2.jpg"></li>
+            <li><img src="../images/pic2_3.jpg"></li>
+            <li><img src="../images/pic2_4.jpg"></li>
+            <li><img src="../images/pic2_5.jpg"></li>
+            <li><img src="../images/pic2_6.jpg"></li>
+            <li><img src="../images/pic2_7.jpg"></li>
+            <li><img src="../images/pic2_8.jpg"></li>
+        </ul>
+    </div>
+</body>
+
+</html>
